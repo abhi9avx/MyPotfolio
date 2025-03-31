@@ -1,144 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Abhinav Kumar - Portfolio</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      body {
+        background: linear-gradient(to right, #ffecd2, #fcb69f);
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
 
- <!DOCTYPE html>
- <html lang="en">
-   <head>
-     <meta charset="utf-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-     <title>Links website</title>
-     <script src="https://unpkg.com/feather-icons"></script>
-     <style>
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        animation: fadeIn 1s ease-in-out;
+      }
 
-       body {
-         background: url("https://source.unsplash.com/X-Bu9X6gok0/2400x1600") no-repeat center center fixed;
-         -webkit-background-size: cover;
-         -moz-background-size: cover;
-         -o-background-size: cover;
-         background-size: cover;
-         padding: 2rem;
-       }
+      header, section, footer {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-       .container {
-         width: 100%;
-         height: 100%;
-         padding-right: 15px;
-         padding-left: 15px;
-         margin-right: auto;
-         margin-left: auto;
-       }
+      header:hover, section:hover, footer:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
 
-       .links-container {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         gap: 20px;
-       }
+      h1, h2, h3 {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
 
-       .links-container a {
-         width: 80%;
-         box-shadow: 2px 2px 0 #444;
-       }
+      .portrait {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 5px solid #fff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        display: block;
+        margin: 0 auto 1rem;
+      }
 
-       .name {
-         background-color: rgba(121, 85, 72, 0.4);
-         color: #ccc;
-         text-shadow: 4px 4px 0 #444;
-         box-shadow: 2px 2px 0 #444;
-         font-size: 18px;
-       }
+      .contact-info, .skills, .achievements, .certifications, .education {
+        list-style: none;
+        padding: 0;
+      }
 
-       .subtext {
-         font-size: 16px;
-         background-color: rgba(121, 85, 72, 0.4);
-         color: #ccc;
-         text-shadow: 1px 1px 0 #444;
-         box-shadow: 2px 2px 0 #444;
-       }
+      .contact-info li, .skills li, .achievements li, .certifications li, .education li {
+        margin-bottom: 0.5rem;
+      }
 
-       svg {
-         stroke: #6d4d41;
-         transform: scale(1.5);
-       }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
 
-       .portrait {
-         border-color: #553c33 !important;
-         width: 100%;
-         max-width: 350px;
-         height: auto;
-         max-height: 500px;
-       }
+      a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
 
-       span {
-         display: block;
-       }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
 
-       .skew-1 {
-         -ms-transform: skewX(20deg); /* IE 9 */
-         -webkit-transform: skewX(20deg); /* Safari */
-         transform: skewX(20deg);
-       }
-       .skew-text-1 {
-         -ms-transform: skewX(-20deg); /* IE 9 */
-         -webkit-transform: skewX(-20deg); /* Safari */
-         transform: skewX(-20deg);
-       }
+      .skills li, .achievements li, .certifications li, .education li {
+        position: relative;
+        padding-left: 20px;
+      }
 
-       .skew-2 {
-         -ms-transform: skewX(-20deg); /* IE 9 */
-         -webkit-transform: skewX-(20deg); /* Safari */
-         transform: skewX(-20deg);
-       }
-       .skew-text-2 {
-         -ms-transform: skewX(20deg); /* IE 9 */
-         -webkit-transform: skewX(20deg); /* Safari */
-         transform: skewX(20deg);
-       }
+      .skills li::before, .achievements li::before, .certifications li::before, .education li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #007bff;
+      }
 
-       @media (min-width: 768px) {
-         .link {
-           width: 100%;
-         }
-       }
-       @media (min-width: 576px) {
-         .container {
-           max-width: 540px;
-         }
+      .w3-brown { background-color: #795548; }
+      .w3-blue { background-color: #2196F3; }
+      .w3-deep-orange { background-color: #FF5722; }
+      .w3-light-blue { background-color: #03A9F4; }
+      .w3-light-grey { background-color: #F5F5F5; color: #333; }
 
-         .name {
-           font-size: 36px;
-         }
+      @media (min-width: 576px) {
+        .name {
+          font-size: 3rem;
+        }
+      }
 
-       }
-     </style>
-   </head>
-   <body>
-     <!-- Content container -->
-     <div class="container">
+      .links-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
 
-       <!-- Image and name container -->
-       <div style="text-align: center">
-         <img loading="lazy" src="https://scontent.fpat3-3.fna.fbcdn.net/v/t1.6435-9/139657822_1820717378101488_2057137330840151017_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=E3BA38bGgS8AX_qGWYI&_nc_ht=scontent.fpat3-3.fna&oh=00_AT_ubPk6OfyS7XcBPAJnd92Vm5JeVkP3YuoNxZmDUnlJYQ&oe=620EEF4C" class="portrait w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-border-dark-grey" alt="image" style="border-radius: 5%;">
-         <h1 class="name"><span class="name w3-padding w3-round" style="font-weight: bolder;">Hello, I'm Abhinav </span></h1>
-         <h2 class="subtext name w3-padding w3-round" style="font-weight: bolder;">SEE WHAT I'M UP TO!</h2>
-         <!-- <i data-feather="arrow-down-circle"></i> -->
-         </div>
-       <br><br>
-       <!-- Links section 1 -->
-       <div class="links-container">
-         <a href="https://abhi9avx.github.io/My-Personal-Website/" class="w3-button w3-round w3-brown w3-hover-blue-grey link skew-2" target="_blank"><span class="skew-text-2">Check my Work!</span></a>
-         <a href="https://www.facebook.com/abhi9avx/" class="w3-button w3-round w3-blue w3-hover-blue-grey link skew-1" target="_blank"><span class="skew-text-1">Check my Facebook!</span></a>
-         <a href="https://www.instagram.com/abhi9avx/" class="w3-button w3-round w3-deep-orange w3-hover-blue-grey link skew-2" target="_blank"><span class="skew-text-2">Check my Instagram!</span></a>
-         <a href="https://www.twitter.com/abhi9avx/" class="w3-button w3-round w3-blue w3-hover-blue-grey link skew-1" target="_blank"><span class="skew-text-1">Check my Twitter!</span></a>
-         <a href="https://www.linkedin.com/in/abhi9avx/" class="w3-button w3-round w3-light-blue w3-hover-blue-grey link skew-1" target="_blank"><span class="skew-text-1">Check my Linkedin!</span></a>
-         <a href="https://github.com/abhi9avx" class="w3-button w3-round w3-light-grey w3-hover-blue-grey link skew-2" target="_blank"><span class="skew-text-2">Check my Github!</span></a>
-         <!-- <i data-feather="arrow-up-circle"></i> -->
-       </div>
+      .links-container a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        background-color: #007bff;
+      }
 
+      .links-container a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="mypic.jpeg" alt="Abhinav Kumar" class="portrait">
+        <h1>Abhinav Kumar</h1>
+        <h2>Software Development Engineer In Test</h2>
+        <ul class="contact-info">
+          <li>Email: <a href="mailto:kumarabhinav1777@gmail.com">kumarabhinav1777@gmail.com</a></li>
+          <li>Phone: 8406938733</li>
+          <li>Location: Khagaria, Bihar, India</li>
+        </ul>
+      </header>
 
-     </div>
-     <script>
-       feather.replace()
-     </script>
-   </body>
- </html>
+      <section>
+        <h2>About Me</h2>
+        <p>Experienced and results-driven SDET 2 with over 2 years of expertise in test automation, CI/CD pipelines, and API/mobile testing. Proficient in Supertest, Appium, and Jenkins, with a proven track record of leading automation efforts, streamlining release processes, and achieving zero-defect production releases.</p>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+        <h3>Software Development Engineer in Test - 2</h3>
+        <p>Slice | <a href="https://www.sliceit.com/" target="_blank">sliceit.com</a> | 08/2024 - Present</p>
+        <ul>
+          <li>Led E2E test automation for critical backend and frontend systems, ensuring zero bug leakage in production through weekly regression testing and optimized test flows.</li>
+          <li>Developed an MQTT (WebSocket) framework for event-driven testing of chatbot services, enhancing message flow validation and reducing manual testing efforts.</li>
+          <li>Took ownership of CX Pod, responsible for 6 backend services with a focus on user experience, identifying potential risks, and resolving issues before development intervention.</li>
+          <li>Played a crucial role during the transition of Slice to a bank, testing new builds, raising a high number of critical bugs, and improving system stability.</li>
+          <li>Mentored junior team members, fostering a learning environment by providing guidance on test case creation, automation best practices, and troubleshooting.</li>
+        </ul>
+        <h3>Software Development Engineer in Test - 1</h3>
+        <p>Slice | <a href="https://www.sliceit.com/" target="_blank">sliceit.com</a> | 08/2022 - 08/2024</p>
+        <ul>
+          <li>Automated E2E testing for backend APIs (Supertest) and mobile applications (Appium), reducing manual effort and improving release velocity.</li>
+          <li>Spearheaded the creation of robust test cases covering functional, performance, and edge scenarios, ensuring application stability.</li>
+          <li>Managed iOS/Android app releases as Release Commander, ensuring smooth deployments, zero bug leakage, and timely releases.</li>
+          <li>Led automation efforts for projects like In-House ChatBot, ConvoBot, and Bonfire, reducing manual testing and accelerating delivery.</li>
+          <li>Performed manual validation of iOS/Android apps, detecting high-priority issues and ensuring consistent product quality across releases.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>Backend Automation: Supertest, JAVA</li>
+          <li>Mobile Automation: Appium</li>
+          <li>Test Planning and Strategy</li>
+          <li>Manual Testing, Jira</li>
+          <li>Webdriver io, Postman</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Achievements</h2>
+        <ul class="achievements">
+          <li>Quality Quest Champion Award: Top bug detection in Bugathon'24.</li>
+          <li>Star of the Month Award: Recognized for outstanding performance in May '24.</li>
+          <li>Super Squad Award at Slice: Key contributions to core projects.</li>
+          <li>Spotlight Award at Slice: Ensured zero bug leakage.</li>
+          <li>Rising Star Award in Slice: Critical work on RBI Project Don.</li>
+          <li>Completed 100 Days of Coding Challenges.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <ul class="certifications">
+          <li>Appium - Mobile Testing (Android/IOS) from Scratch+Frameworks (01/2023 - 03/2023)</li>
+          <li>Complete Interview Preparation With Doubt Assistance (04/2022 - 02/2022)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul class="education">
+          <li>Computer Science and Engineering, Lovely Professional University, Jalandhar (07/2018 - 07/2022), 7.6 CGPA</li>
+          <li>XII (CBSE), D.A.V Public School, Bokaro, Jharkhand (05/2015 - 04/2017), 81%</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Links</h2>
+        <div class="links-container">
+          <a href="https://abhi9avx.github.io/My-Personal-Website/" target="_blank">Check my Work!</a>
+          <a href="https://www.facebook.com/abhi9avx/" target="_blank">Check my Facebook!</a>
+          <a href="https://www.instagram.com/abhi9avx/" target="_blank">Check my Instagram!</a>
+          <a href="https://www.twitter.com/abhi9avx/" target="_blank">Check my Twitter!</a>
+          <a href="https://www.linkedin.com/in/abhi9avx/" target="_blank">Check my Linkedin!</a>
+          <a href="https://github.com/abhi9avx" target="_blank">Check my Github!</a>
+        </div>
+      </section>
+
+      <footer>
+        <h2>Contact</h2>
+        <p>Feel free to reach out via email or connect with me on LinkedIn.</p>
+      </footer>
+    </div>
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>
